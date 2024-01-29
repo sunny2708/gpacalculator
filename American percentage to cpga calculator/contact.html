@@ -1,0 +1,114 @@
+<!-- ... existing code ... -->
+
+<!-- "Create Inputs" and "Submit" Buttons Side by Side -->
+<div class="flex items-center justify-between mt-4">
+    <!-- "Create Inputs" Button -->
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="createSubjectInputs()">
+        Create Inputs
+    </button>
+
+    <!-- "Submit" Button (Initially Hidden) -->
+    <div id="submitButton" class="hidden">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="calculateGPA()">
+            Calculate GPA
+        </button>
+        <!-- Display GPA and Average -->
+        <p id="gpaResult" class="text-lg mt-4 font-semibold"></p>
+    </div>
+</div>
+
+<!-- ... existing code ... -->
+
+<script>
+    function calculateGPA() {
+        const numSubjects = document.getElementById('numSubjects').value;
+        let totalGPA = 0;
+
+        for (let i = 1; i <= numSubjects; i++) {
+            const subjectMarks = parseFloat(document.getElementById(`subject${i}`).value);
+
+            // Use the given formula for GPA calculation
+            if (subjectMarks === 46) {
+                totalGPA += 2.6;
+            } else if (subjectMarks === 45) {
+                totalGPA += 2.5;
+            } else if (subjectMarks === 44) {
+                totalGPA += 2.4;
+            } else if (subjectMarks === 40) {
+                totalGPA += 2;
+            } else if (subjectMarks === 47) {
+                totalGPA += 2.7;
+            } else if (subjectMarks === 50) {
+                totalGPA += 2.85;
+            } else if (subjectMarks >= 90 && subjectMarks <= 100) {
+                totalGPA += 4;
+            } // ... add more conditions as per your requirements
+        }
+
+        // Calculate average GPA
+        const averageGPA = totalGPA / numSubjects;
+
+        // Display the result
+        const gpaResultElement = document.getElementById('gpaResult');
+        gpaResultElement.textContent = `Your GPA: ${averageGPA.toFixed(2)}`;
+    }
+</script>
+
+<!-- ... existing code ... -->
+<!-- ... existing code ... -->
+
+<!-- "Create Inputs" and "Submit" Buttons Side by Side -->
+<div class="flex items-center justify-between mt-4">
+    <!-- "Create Inputs" Button -->
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="createSubjectInputs()">
+        Create Inputs
+    </button>
+
+    <!-- "Submit" Button (Initially Hidden) -->
+    <div id="submitButton" class="hidden">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="calculateGPA()">
+            Calculate GPA
+        </button>
+        <!-- Display GPA and Average -->
+        <p id="gpaResult" class="text-lg mt-4 font-semibold"></p>
+    </div>
+</div>
+
+<!-- ... existing code ... -->
+
+<script>
+    function calculateGPA() {
+        const numSubjects = document.getElementById('numSubjects').value;
+        let totalGPA = 0;
+
+        for (let i = 1; i <= numSubjects; i++) {
+            const subjectMarks = parseFloat(document.getElementById(`subject${i}`).value);
+
+            // Use the given formula for GPA calculation
+            if (subjectMarks === 46) {
+                totalGPA += 2.6;
+            } else if (subjectMarks === 45) {
+                totalGPA += 2.5;
+            } else if (subjectMarks === 44) {
+                totalGPA += 2.4;
+            } else if (subjectMarks === 40) {
+                totalGPA += 2;
+            } else if (subjectMarks === 47) {
+                totalGPA += 2.7;
+            } else if (subjectMarks === 50) {
+                totalGPA += 2.85;
+            } else if (subjectMarks >= 90 && subjectMarks <= 100) {
+                totalGPA += 4;
+            } // ... add more conditions as per your requirements
+        }
+
+        // Calculate average GPA
+        const averageGPA = totalGPA / numSubjects;
+
+        // Display the result
+        const gpaResultElement = document.getElementById('gpaResult');
+        gpaResultElement.textContent = `Your GPA: ${averageGPA.toFixed(2)}`;
+    }
+</script>
+
+<!-- ... existing code ... -->
